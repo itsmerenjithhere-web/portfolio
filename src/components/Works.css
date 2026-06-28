@@ -1,0 +1,134 @@
+.works {
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-color); /* To hide elements from parallax below */
+}
+
+.works-header {
+  margin-bottom: 80px;
+}
+
+.works-title {
+  margin-bottom: -20px;
+}
+
+.works-desc {
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.works-filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--surface-container);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.filter-btn.active {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  border-color: var(--text-primary);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.work-card {
+  cursor: pointer;
+  group: hover;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--surface-container);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.work-card:hover .work-img-wrapper {
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  transform: translateY(-8px);
+}
+
+.work-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+
+.work-overlay span {
+  padding: 12px 24px;
+  background: var(--text-primary);
+  color: var(--bg-color);
+  border-radius: 9999px;
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.work-card:hover .work-overlay span {
+  transform: translateY(0);
+}
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.work-title {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .works-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+}

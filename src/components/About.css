@@ -1,0 +1,29 @@
+.about {
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-color);
+  padding: 120px 0 80px; /* Reduced top padding slightly since it follows Hero */
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+}
+
+.about-title {
+  color: var(--accent-orange);
+}
+
+.about-text {
+  font-size: 24px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 18px;
+  }
+}
