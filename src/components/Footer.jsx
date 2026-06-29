@@ -12,9 +12,9 @@ const Footer = () => {
               Creative Visual Designer merging aesthetics with functionality to create timeless digital products. Based in Kumily, Idukki, available worldwide.
             </p>
             <div className="footer-links text-label-caps">
-              <a href="#">Behance</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">Instagram</a>
+         <a href="https://www.behance.net/itsrenjith" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://www.linkedin.com/in/renjith-muraleedharan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://vimeo.com/user98693260" target="_blank" rel="noopener noreferrer">Vimeo</a>
             </div>
           </div>
           
